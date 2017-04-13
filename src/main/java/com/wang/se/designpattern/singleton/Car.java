@@ -6,6 +6,9 @@ package com.wang.se.designpattern.singleton;
  */
 public class Car {
     private static Car car=new Car();
+    private Car(){
+
+    }
     public static Car getInstance(){
         return car;
     }
