@@ -2,6 +2,7 @@ package com.wang.se.designpattern.adapter;
 
 /**
  * Created by wang on 2018/2/27.
+ * AudioPlayer原本只能放mp3,现在让它既能放mp3又能放MP4，vlc，那就搞个适配器怼在它上面，当要放mp4和vlc时，用适配器去放
  */
 public class Test {
     public static void main(String[] args) {
