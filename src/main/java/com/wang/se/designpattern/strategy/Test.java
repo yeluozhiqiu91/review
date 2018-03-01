@@ -6,12 +6,12 @@ package com.wang.se.designpattern.strategy;
  */
 public class Test {
     public static void main(String[] args) {
-        Context context=new Context(new OperationAdd());
+        Context context=new Context(new OperationAdd());//使用相加策略
         System.out.println("10 + 20 = "+context.executeStrategy(10,20));
 
-        context=new Context(new OperationMul());
+        context=new Context(new OperationMul());//使用相减策略
         System.out.println("10 * 20 = "+context.executeStrategy(10,20));
-        context=new Context(new OperationSub());
+        context=new Context(new OperationSub());//使用相乘策略
         System.out.println("10 - 20 = "+context.executeStrategy(10,20));
     }
 }
