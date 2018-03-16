@@ -9,5 +9,6 @@ public class AppleTest {
         System.out.println(apple.getInfo());
         Apple<Integer> apple2=new Apple<Integer>(5);
         System.out.println(apple2.getInfo());
+        System.out.println(apple.getClass()==apple2.getClass());
     }
 }
