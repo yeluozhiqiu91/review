@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script language="JavaScript">
+    var book={
+        title:"java高级编程",
+        authors:["作者1","作者2"],
+        edition:3,
+        year:2011
+    };
+    var jsonText=JSON.stringify(book);//将javascript对象转成json字符串
+    alert(jsonText);
+    var bookCopy=JSON.parse(jsonText);
+</script>

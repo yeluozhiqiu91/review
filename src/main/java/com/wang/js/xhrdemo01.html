@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xhrdemo01</title>
+</head>
+<body>
+
+</body>
+</html>
+<script language="JavaScript">
+    function createXHR(){
+        if(typeof XMLHttpRequest !="undefined"){
+            //alert("support new XMLHttpRequest");
+            return new XMLHttpRequest();
+        }else if(typeof ActiveXObject !="undefined"){
+            if(typeof arguments.callee.activeXString !="string"){
+                var versions=["MSXML2.XMLHttp.6.0","MSXML2.XMLHttp.3.0","MSXML2.XMLHttp"];
+                for(var i=0;i<3;i++){
+                    try{
+                        new ActiveXObject(versions[i]);
+                        arguments.callee.activeXString=versions[i];
+                        break;
+                    }catch (ex){
+                        //跳过，啥都不做
+                    }
+                }
+            }
+            //alert("support new ActiveXObject");
+            return new ActiveXObject(arguments.callee.activeXString);
+        }else{
+            throw new Error("No XHR Object Avaliable");
+        }
+    }
+    var xhr=createXHR();
+    xhr.onreadystatechange=function () {
+        if(xhr.readyState==4){
+            if((xhr.status>=200 && xhr.status<300)||xhr.status==304){
+                alert(xhr.responseText);
+            }else{
+                alert("Request is unsuccessful:"+xhr.status);
+            }
+        }
+    }
+    xhr.open("get","example.txt",true);
+    xhr.send(null);//有数据发送就传数据，没有就传null
+
+</script>
