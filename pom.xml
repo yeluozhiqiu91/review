@@ -7,6 +7,18 @@
     <groupId>myreview</groupId>
     <artifactId>review</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <properties>
         <slf4j.version>1.6.4</slf4j.version>
         <slf4j-api.version>1.7.5</slf4j-api.version>
@@ -55,6 +67,20 @@
             <artifactId>jcl-over-slf4j</artifactId>
             <version>${slf4j-api.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.sun</groupId>
+            <artifactId>javadoc</artifactId>
+            <version>1.8</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/java/com/wang/lib/tools.jar</systemPath>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-core -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-core</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+
     </dependencies>
     
 </project>
