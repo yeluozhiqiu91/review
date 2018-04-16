@@ -33,7 +33,7 @@ public class TraderTest {
         (8) 找到交易额最小的交易。*/
         List<Transaction> list1=transactions.stream().filter(t->t.getYear()==2011).sorted(Comparator.comparing(Transaction::getValue)).collect(Collectors.toList());
         System.out.println("1.找出2011年发生的所有交易，并按交易额排序（从低到高）:"+list1);
-        List<String> list2=transactions.stream().map(d->d.getTrader().getCity()).distinct().collect(Collectors.toList());
+        List<String> list2=transactions.stream().map(d->d.getTrader().getCity()).distinct().collect(Collectors.toList());//这里还可以用toSet()，这样就不需要distinct了
         System.out.println("2.交易员都在哪些不同的城市工作过:"+list2);
         List<Trader> list3=transactions.stream().filter(d->d.getTrader().getCity().equals("Cambridge")).map(d->d.getTrader()).sorted(Comparator.comparing(Trader::getName)).distinct().collect(Collectors.toList());
         System.out.println("3.查找所有来自于剑桥的交易员，并按姓名排序："+list3);
