@@ -6,6 +6,8 @@ package com.wang.se.algorithm;
 public class SortUtil {
     //冒泡排序，两两比较，前面比后面大就交换位置，每一趟过后，最大的都跑到最后面
     public static int[] bubbleSort(int a[]){
+        System.out.print("原始数据：");
+        printIntArray(a);
         for(int i=0;i<a.length;i++){
             for(int j=0;j<a.length-i-1;j++){
                 if(a[j]>a[j+1]){
@@ -14,11 +16,15 @@ public class SortUtil {
                     a[j+1]=temp;
                 }
             }
+            System.out.print("冒泡排序第"+(i+1)+"趟：");
+            printIntArray(a);
         }
         return a;
     }
     //插入排序，默认第一个元素自己是排好序的，从第二个元素开始得找到它应该在的位置然后插入该位置
     public static int[] insertSort(int a[]){
+        System.out.print("原始数据：");
+        printIntArray(a);
         for(int i=0;i<a.length-1;i++){
             int j=i+1;
             int temp=a[j];
@@ -27,12 +33,16 @@ public class SortUtil {
                 j--;
             }
             a[j]=temp;
+            System.out.print("插入排序第"+(i+1)+"趟：");
+            printIntArray(a);
         }
         return a;
     }
 
     //用一个变量来记录最小值位置，每一趟都选出后面没有排序的最小值位置，然后将该最小值与未排好序的第一个元素交换位置
     public static int[] selectSort(int a[]){
+        System.out.print("原始数据：");
+        printIntArray(a);
         for(int i=0;i<a.length-1;i++){
             int minPos=i;
             for(int j=i+1;j<a.length;j++){
@@ -45,6 +55,8 @@ public class SortUtil {
                 a[i]=a[minPos];
                 a[minPos]=temp;
             }
+            System.out.print("选择排序第"+(i+1)+"趟：");
+            printIntArray(a);
         }
         return a;
     }
