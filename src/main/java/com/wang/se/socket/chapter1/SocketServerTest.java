@@ -1,4 +1,4 @@
-package com.wang.se.socket;
+package com.wang.se.socket.chapter1;
 
 import java.io.IOException;
 import java.io.InputStream;
