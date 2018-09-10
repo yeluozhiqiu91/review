@@ -25,11 +25,17 @@
     </properties>
     <dependencies>
         <!--用来截图的工具-->
+        <!-- https://mvnrepository.com/artifact/net.sf.cssbox/cssbox -->
         <dependency>
-            <groupId>org.fit.cssbox</groupId>
+            <groupId>net.sf.cssbox</groupId>
             <artifactId>cssbox</artifactId>
             <version>4.12</version>
         </dependency>
+        <!--<dependency>
+            <groupId>org.fit.cssbox</groupId>
+            <artifactId>cssbox</artifactId>
+            <version>4.12</version>
+        </dependency>-->
         <dependency>
             <groupId>net.sf.cssbox</groupId>
             <artifactId>jstyleparser</artifactId>
@@ -66,13 +72,6 @@
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
             <version>${slf4j-api.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun</groupId>
-            <artifactId>javadoc</artifactId>
-            <version>1.8</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/src/main/java/com/wang/lib/tools.jar</systemPath>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-core -->
         <dependency>

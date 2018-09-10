@@ -1,4 +1,4 @@
-package com.wang.se.designpattern.chain;
+package com.wang.se.designpattern.chain.logger;
 
 /**
  * Created by wang on 2018/2/28.
