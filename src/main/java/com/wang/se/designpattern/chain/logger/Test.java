@@ -14,10 +14,15 @@ public class Test {
     }
     public static void main(String[] args) {
         AbstractLogger chain=getChainOfLoggers();
-        chain.logMessage(AbstractLogger.INFO,"This is an information");//infoLogger可以处理INFO级别的消息
+        //infoLogger可以处理INFO级别的消息
+        chain.logMessage(AbstractLogger.INFO,"This is an information");
         System.out.println();
-        chain.logMessage(AbstractLogger.DEBUG,"This is a debug information");//debugLogger可以处理INFO、DEBUG级别的消息
+
+        //debugLogger可以处理INFO、DEBUG级别的消息
+        chain.logMessage(AbstractLogger.DEBUG,"This is a debug information");
         System.out.println();
-        chain.logMessage(AbstractLogger.ERROR,"This is an error information");//errorLogger可以处理INFO、DEBUG、ERROR级别的消息
+
+        //errorLogger可以处理INFO、DEBUG、ERROR级别的消息
+        chain.logMessage(AbstractLogger.ERROR,"This is an error information");
     }
 }
