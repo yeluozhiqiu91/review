@@ -14,6 +14,7 @@ public class OrCriteria implements Criteria{
         this.otherCriteria = otherCriteria;
     }
 
+    @Override
     public List<Person> meetCriteria(List<Person> personList) {
         List<Person> firstPersons=this.firstCriteria.meetCriteria(personList);
         List<Person> secondPersons=this.otherCriteria.meetCriteria(personList);
