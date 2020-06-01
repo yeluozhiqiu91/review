@@ -8,6 +8,12 @@ public class Person {
     private String name;
     private Integer age;
 
+    public void init(){
+        System.out.println("person init...");
+    }
+    public void destroy(){
+        System.out.println("person destroy...");
+    }
     public String getName() {
         return name;
     }
